@@ -1,9 +1,12 @@
-package com.cjc.model;
+package com.cjc.main.model;
 
 import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import lombok.AllArgsConstructor;
@@ -16,7 +19,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ProductDetails
 {
-  private int productDetailsId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+  private Integer productDetailsId;
   private String manufacturerName;
   private String modelNumber;
   @OneToMany(cascade = CascadeType.ALL)

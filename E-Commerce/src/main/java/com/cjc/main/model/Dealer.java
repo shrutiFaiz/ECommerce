@@ -1,4 +1,4 @@
-package com.cjc.model;
+package com.cjc.main.model;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -14,16 +14,17 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Employee 
+public class Dealer 
 {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-   private int employeeId;
-   private String employeeName;
-   @OneToOne(cascade = CascadeType.ALL)
-   private Address employeeAddress;
-   private long employeeMobileNumber;
-   private String employeeEmail;
-   @OneToOne(cascade = CascadeType.ALL)
-   private User userDetails;
+  private Integer dealerId;
+  private String dealerName;
+  private String dealerEmail;
+  private Long dealerMobileNumber;
+  @OneToOne(cascade = CascadeType.ALL)
+  private Address dealerAddress;
+  @OneToOne(cascade = CascadeType.ALL)
+  private BankDetails dealerBankDetails;
+  
 }

@@ -1,4 +1,4 @@
-package com.cjc.model;
+package com.cjc.main.model;
 
 import java.util.Set;
 
@@ -25,10 +25,10 @@ public class Customer
 {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-  private int customerId;
+  private Integer customerId;
   private String customerName;
   private String customerEmail;
-  private long customerMobileNumber;
+  private Long customerMobileNumber;
   @OneToOne(cascade = CascadeType.ALL)
   private User userDetails;
   @OneToOne(cascade = CascadeType.ALL)
@@ -37,6 +37,6 @@ public class Customer
   private BankDetails customerBankDetails;
   @OneToMany(cascade = CascadeType.ALL)
   private Set<Product> wishlist;
- // @OneToMany(cascade = CascadeType.ALL)
-  //private Set<OrderDetails> orderHistory;
+  @OneToMany(cascade = CascadeType.ALL)
+  private Set<OrderDetails> orderHistory;
 }
