@@ -1,6 +1,8 @@
-package com.cjc.model;
+package com.cjc.main.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
@@ -14,10 +16,11 @@ import lombok.NoArgsConstructor;
 public class BankDetails 
 {
 	@Id
-   private long bankAccountNumber;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+   private Long bankAccountNumber;
    private String bankName;
    private String branchName;
    private String ifscNumber;
-   private long cardNumber;
+   private Long cardNumber;
    
 }

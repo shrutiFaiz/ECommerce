@@ -1,6 +1,8 @@
-package com.cjc.model;
+package com.cjc.main.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
@@ -14,6 +16,7 @@ import lombok.NoArgsConstructor;
 public class ProductFeatures 
 {
   @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private String featureId;
   private String featureName;
   private String featureValue;
