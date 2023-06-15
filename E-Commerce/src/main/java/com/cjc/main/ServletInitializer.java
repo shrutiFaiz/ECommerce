@@ -1,4 +1,4 @@
-package com.cjc.ecommerce.app;
+package com.cjc.main;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
