@@ -1,0 +1,11 @@
+com\cjc\model\Employee.class
+com\cjc\model\User.class
+com\cjc\model\BankDetails.class
+com\cjc\main\ECommerceApplication.class
+com\cjc\model\Address.class
+com\cjc\model\ProductDetails.class
+com\cjc\model\Dealer.class
+com\cjc\model\ProductFeatures.class
+com\cjc\main\ServletInitializer.class
+com\cjc\model\Product.class
+com\cjc\model\Customer.class
