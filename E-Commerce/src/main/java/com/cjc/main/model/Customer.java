@@ -19,8 +19,6 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-
-
 public class Customer 
 {
 	@Id
@@ -34,7 +32,7 @@ public class Customer
   @OneToOne(cascade = CascadeType.ALL)
   private Address customerAddress;
   @OneToOne(cascade = CascadeType.ALL)
-  private BankDetails customerBankDetails;
+  private BankDetails customerBankDetails; 
   @OneToMany(cascade = CascadeType.ALL)
   private Set<Product> wishlist;
   @OneToMany(cascade = CascadeType.ALL)
