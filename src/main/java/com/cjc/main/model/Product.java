@@ -22,6 +22,7 @@ public class Product
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
   private Integer productId;
+  private String productName;
   private String productCategory;
   private Float productPrice;
   private Integer productAvailableCount;
