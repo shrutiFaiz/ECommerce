@@ -17,7 +17,7 @@ public class ProductFeatures
 {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private String featureId;
+  private Integer featureId;
   private String featureName;
   private String featureValue;
   

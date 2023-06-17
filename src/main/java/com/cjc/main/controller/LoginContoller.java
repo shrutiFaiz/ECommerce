@@ -23,10 +23,12 @@ public class LoginContoller {
 	
 	
 	@GetMapping("/getsingledata/{userName}/{password}")
-	public ResponseEntity<User> getsingledata(@PathVariable String userName, @PathVariable String password){
+	public ResponseEntity<User> getsingledata(@PathVariable("userName") String userName, @PathVariable("password") String password){
+		
+		System.out.println("username "+userName);
 		
 		User u=ls.getsingledata(userName,password);
-		System.out.println("Done");
+		System.out.println("Don!!!e");
 		
 		return new ResponseEntity<User>(u,HttpStatus.OK);
 

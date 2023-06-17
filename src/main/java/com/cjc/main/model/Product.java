@@ -26,11 +26,11 @@ public class Product
   private String productCategory;
   private Float productPrice;
   private Integer productAvailableCount;
-  private Integer productRating;
+  
   @OneToMany(cascade = CascadeType.ALL)
   private Set<Dealer> availableDealer;
   @OneToOne(cascade = CascadeType.ALL)
-  private Product productDetails;
+  private ProductDetails productDetails;
   
   
   
