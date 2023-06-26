@@ -6,17 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cjc.main.model.Dealer;
 import com.cjc.main.model.Employee;
+import com.cjc.main.model.Product;
 import com.cjc.main.serviceinterface.AdminServiceI;
 
 
-
+@CrossOrigin("*")
 @RestController
 public class AdminController {
 	
@@ -66,6 +69,16 @@ public class AdminController {
 			
 		}
 	
+	//getDealerByid
+	@GetMapping("/getDealerById/{dealerId}")
+	public ResponseEntity<Dealer> getDealerById(@PathVariable ("dealerId") Integer dealerId)
+	
+	{
+		Dealer  d= asi.getDealerById(dealerId);
+	   
+	   return new ResponseEntity<Dealer>(d,HttpStatus.OK);
 	}
+	
+}
 	
 

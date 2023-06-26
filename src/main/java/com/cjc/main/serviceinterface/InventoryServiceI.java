@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.cjc.main.model.Employee;
 import com.cjc.main.model.Product;
+import com.cjc.main.model.User;
 
 public interface InventoryServiceI 
 {
