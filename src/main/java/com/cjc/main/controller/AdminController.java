@@ -43,6 +43,7 @@ public class AdminController {
 	 {
 
 	    List<Employee>list= (List<Employee>) asi.getEmployee();
+		System.out.println("List");
 	    
 	return new ResponseEntity<List<Employee>>(list,HttpStatus.OK) ;
 			
